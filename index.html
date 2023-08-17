@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adding link to use Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChg6D6L48QD0YxK1FxWbUOttaTBFLGl1A&libraries=places"></script>
+    <link rel="stylesheet" href="./Develop/css/style.css">
+    <title>Quality Restaurant Finder</title>
+</head>
+<!-- Body of the page where we include the search area, the users favorites section, and all the restaurants in their area -->
+<!-- The search area -->
+<body class="bg-slate-200">
+    <section class="text-center mt-2.5 shadow">
+        <h1 class="text-3xl font-bold font-mono py-3 text-white"  style="background-color: #6991E3;">Quality Restaurant Finder</h1>
+        <h5><i>Please enter an address to find great restaurants around you!</i></h5>
+        <form id="frmUserSearch">
+            <div class="flex justify-center mt-2.5 pb-2.5">
+                <input class="bg-gray-200 appearance-none mr-8 border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" id="txtboxUserAddress" placeholder="Address">
+                <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" id="txtboxCityName" placeholder="City,State(ex. Boston MA)">
+            </div>
+            <button id="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-3">Submit</button>
+        </form>
+    </section>
+    <hr>
+    <!-- Favorites Section -->
+    <div class="flex">
+        <div id="favorites" class="w-1/5 border-r-orange-800">
+            <h2 class="text-center text-2xl font-bold">My Favorites</h2>
+        </div>
+        <!-- Main area where we display the results -->
+        <div class="flex justify-left mt-2.5 pb-2.5">
+            <div id="divContainerMain"></div>
+        </div>
+    </div>
+    <script src="./Develop/js/script.js"></script>
+</body>
+</html>
