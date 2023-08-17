@@ -39,8 +39,8 @@ AS A food connoisseur
 -  Google Maps API - https://maps.googleapis.com/
 
 ## Review
-- Deployed Application URL: https://sajitharavindan.github.io/weather-dashboard/
-- GitHub Repository: https://github.com/SajithAravindan/weather-dashboard.git
+-  Deployed Application URL: https://sajitharavindan.github.io/quality-restaurant-finder/
+-  GitHub Repository: https://github.com/SajithAravindan/quality-restaurant-finder.git
 
 
 ## License
