@@ -25,7 +25,7 @@ AS A food connoisseur
 
 # Demo
 
-<img src="./assets/img/demo.png" alt="Project Demo">
+<img src="./Develop/img/demo.png" alt="Project Demo">
 
 # Presentation
 <a href="./Presentation/Presentation Template.pdf" target="_blank">Check Out Presentation!<a>
