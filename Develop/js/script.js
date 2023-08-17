@@ -111,13 +111,11 @@ function DisplayRestaurantData(objRestuarantAPIJson) {
     let strFLContnet = '';
     //loop through the JSON
     for (i = 0; i < 6; i++) {
-        //Store Location Details  
-        //Main Card display
-        var lnDivider = document.createElement('hr');//line 
-        divContainerMain.append(lnDivider);
-
-        var divCardBlock = document.createElement('div');//Card        
-        divCardBlock.setAttribute('style', 'max-width: 92rem; margin: 5px; background-color:#FFFFFF;');
+         
+        //Main Card display       
+        var divCardBlock = document.createElement('div');//Card 
+        divCardBlock.setAttribute('class', 'pl-6 mx-3 my-5 ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20');       
+        divCardBlock.setAttribute('style', 'max-width: 92rem; background-color:#FFFFFF;');
 
         var divCardBlockHeader = document.createElement('div');//card Header
         divCardBlockHeader.setAttribute('class', 'card-header');
@@ -136,6 +134,7 @@ function DisplayRestaurantData(objRestuarantAPIJson) {
         var imgRestaurant = document.createElement('img');//Main Image 
         imgRestaurant.setAttribute('src', '' + objRestuarantAPIJson.results.data[i].photo.images.small.url + '');
         imgRestaurant.setAttribute('alt', 'Hotel');
+        imgRestaurant.setAttribute('class','rounded shadow-lg dark:shadow-black/20')
         //Details
         var divCardBlockContentTemp = document.createElement('p');
         divCardBlockContentTemp.setAttribute('class', 'card-text');
@@ -242,7 +241,7 @@ function fetchDistance(strdestinationlat, id) {
 function storeFavorites() {
     let favoritesButtons = document.querySelectorAll('#favoritesButtons');
     let storedRestaurantString = localStorage.getItem('restaurants');
-    if (storedRestaurantString.length === 0) {
+    if (storedRestaurantString == "" || storedRestaurantString == null) {
         let storedRestaurants = [];
         favoritesButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -275,9 +274,9 @@ function storeFavorites() {
 
 //Retrieves previous restaurants that have been favorited by the user
 function getRestaurants() {
-    let storedRestaurantsString = localStorage.getItem('restaurants');
-    let storedRestaurantArray = JSON.parse(storedRestaurantsString);
-    if (storedRestaurantsString != "" && storedRestaurantsString != null) {        
+    let storedRestaurantsString = localStorage.getItem('restaurants');    
+    if (storedRestaurantsString != "" && storedRestaurantsString != null) {  
+        let storedRestaurantArray = JSON.parse(storedRestaurantsString);      
         for (let SRAi = 0; SRAi < storedRestaurantArray.length; SRAi++) {
             let restaurant = storedRestaurantArray[SRAi];
             const divTag = document.createElement("div")
