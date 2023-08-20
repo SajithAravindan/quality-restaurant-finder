@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChg6D6L48QD0YxK1FxWbUOttaTBFLGl1A&libraries=places"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./Develop/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Develop/css/style.css">
     <title>Quality Restaurant Finder</title>
 </head>
 <!-- Body of the page where we include the search area, the users favorites section, and all the restaurants in their area -->
@@ -30,28 +30,16 @@
                     type="text" id="txtboxCityName" placeholder="City,State(ex. Boston MA)">
             </div>
             <div class="grid place-items-start md:place-items-center mt-2.5 pb-2.5">
-            <button id="submit"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-3">Submit</button>
-            <div class="w-96 hidden items-center rounded-lg shadow-lg rounded-lg bg-red-500" id="divAlert">
-                <strong class="mr-1">Please enter a City Name and Address! </strong>
-                <button type="button" id="btnAlert"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded m-3">
-                   X
-                </button>
-            </div>
-        </div>
-            <!-- <div class="flex w-96 shadow-lg rounded-lg" id="divAlert">
-                <div class="bg-red-600 py-4 px-6 rounded-l-lg flex items-center">
-                   
+                <button id="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-3">Submit</button>
+                <div class="w-96 hidden items-center rounded-lg shadow-lg rounded-lg bg-red-500" id="divAlert">
+                    <strong class="mr-1">Please enter Address and a City Name! </strong>
+                    <button type="button" id="btnAlert"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded m-3">
+                        X
+                    </button>
                 </div>
-                <div
-                    class="px-4 py-6 bg-white rounded-r-lg flex justify-between items-center w-full border border-l-transparent border-gray-200">
-                    <div>Danger alert</div>
-                    <button id="btnAlert">
-                        Ok
-                    </button> -->
-            </div>
-            </div>
+            </div>           
         </form>
     </section>
     <hr>

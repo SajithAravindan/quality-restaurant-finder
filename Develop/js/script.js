@@ -137,10 +137,10 @@ function DisplayRestaurantData(objRestuarantAPIJson) {
         var imgRestaurant = document.createElement('img');//Main Image 
         imgRestaurant.setAttribute('src', '' + objRestuarantAPIJson.results.data[i].photo.images.small.url + '');
         imgRestaurant.setAttribute('alt', 'Hotel');
-        imgRestaurant.setAttribute('class','rounded shadow-lg dark:shadow-black/20')
+        imgRestaurant.setAttribute('class','rounded shadow-lg shadow-cyan-500/50')
         //Details
         var divCardBlockContentTemp = document.createElement('p');
-        divCardBlockContentTemp.setAttribute('class', 'card-text');
+        divCardBlockContentTemp.setAttribute('class', 'my-4 text-base text-neutral-600 dark:text-neutral-200');
         strFLContnet = ''
         if (objRestuarantAPIJson.results.data[i].description != '' && objRestuarantAPIJson.results.data[i].description != null)
             strFLContnet = objRestuarantAPIJson.results.data[i].description + '<br /><br />';
@@ -151,7 +151,7 @@ function DisplayRestaurantData(objRestuarantAPIJson) {
         strFLContnet = '';//Empty Contents 
 
         var divCardBlockContentTemp2 = document.createElement('p');
-        divCardBlockContentTemp2.setAttribute('class', 'card-text');
+        divCardBlockContentTemp2.setAttribute('class', 'mb-4 text-base text-neutral-600 dark:text-neutral-200');
         //add details
         strFLContnet = '<b>Address:</b> ' + objRestuarantAPIJson.results.data[i].address + ',  <b>Phone </b> ' + objRestuarantAPIJson.results.data[i].phone +
             ',  <b>email:</b> <a class="text-primary underline decoration-transparent transition duration-300 ease-in-out hover:decoration-inherit" href = "mailto:' + objRestuarantAPIJson.results.data[i].email + '" target="_blank">Send Email</a><br />' +
@@ -167,7 +167,7 @@ function DisplayRestaurantData(objRestuarantAPIJson) {
 
         strFLContnet = '';//Empty Contents 
         var divCardBlockContentTemp3 = document.createElement('p');
-        divCardBlockContentTemp3.setAttribute('class', 'card-text');
+        divCardBlockContentTemp3.setAttribute('class', 'mb-4 text-base text-neutral-600 dark:text-neutral-200');
         //get Cuisine
         if (objRestuarantAPIJson.results.data[i].cuisine != '' && objRestuarantAPIJson.results.data[i].cuisine != null) {
             strFLContnet = '<br /><b><ul>Cuisine: </ul></b>';
