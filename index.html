@@ -13,16 +13,44 @@
 </head>
 <!-- Body of the page where we include the search area, the users favorites section, and all the restaurants in their area -->
 <!-- The search area -->
+
 <body class="bg-slate-200">
     <section class="text-center mt-2.5 shadow">
-        <h1 class="text-3xl font-bold font-mono py-3 text-white"  style="background-color: #6991E3;">Quality Restaurant Finder</h1>
+        <h1 class="text-3xl font-bold font-mono py-3 text-white" style="background-color: #6991E3;">Quality Restaurant
+            Finder</h1>
         <h5><i>Please enter an address to find great restaurants around you!</i></h5>
         <form id="frmUserSearch">
             <div class="flex justify-center mt-2.5 pb-2.5">
-                <input class="bg-gray-200 appearance-none mr-8 border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" id="txtboxUserAddress" placeholder="Address">
-                <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" id="txtboxCityName" placeholder="City,State(ex. Boston MA)">
+                <input
+                    class="bg-gray-200 appearance-none mr-8 border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    type="text" id="txtboxUserAddress" placeholder="Address">
+                <input
+                    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    type="text" id="txtboxCityName" placeholder="City,State(ex. Boston MA)">
             </div>
-            <button id="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-3">Submit</button>
+            <div class="grid place-items-start md:place-items-center mt-2.5 pb-2.5">
+            <button id="submit"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-3">Submit</button>
+            <div class="w-96 hidden items-center rounded-lg shadow-lg rounded-lg bg-red-500" id="divAlert">
+                <strong class="mr-1">Please enter a City Name and Address! </strong>
+                <button type="button" id="btnAlert"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded m-3">
+                   X
+                </button>
+            </div>
+        </div>
+            <!-- <div class="flex w-96 shadow-lg rounded-lg" id="divAlert">
+                <div class="bg-red-600 py-4 px-6 rounded-l-lg flex items-center">
+                   
+                </div>
+                <div
+                    class="px-4 py-6 bg-white rounded-r-lg flex justify-between items-center w-full border border-l-transparent border-gray-200">
+                    <div>Danger alert</div>
+                    <button id="btnAlert">
+                        Ok
+                    </button> -->
+            </div>
+            </div>
         </form>
     </section>
     <hr>
@@ -38,4 +66,5 @@
     </div>
     <script src="./Develop/js/script.js"></script>
 </body>
+
 </html>

@@ -14,10 +14,12 @@ let favoritesArea = document.querySelector('#favorites');
 function init() {
     //Event Handler for Button Click
     userFormEl.addEventListener('submit', SearchSubmitHandler);// Search Button   
-
+    btnAlert.addEventListener('click', CloseAlert);// Search Button 
     //Empty Pre existing data
     divContainerMain.textContent = "";
 }
+
+var CloseAlert =()=>document.getElementById('divAlert').style.display="none";
 
 //Function called when search button is clicked
 var SearchSubmitHandler = function (event) {
@@ -32,7 +34,7 @@ var SearchSubmitHandler = function (event) {
         getUserRepos(strUserSearch);//get restaurant data        
         strCityName.textContent = '';
     } else {
-        alert('Please enter a City Name and Address');
+        document.getElementById('divAlert').style.display="block";
     }
 };
 
@@ -95,6 +97,7 @@ function getRestaurantData(intULocId) {
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
+                    console.log(data);
                     DisplayRestaurantData(data);
                 });
             } else {
@@ -288,6 +291,31 @@ function getRestaurants() {
         }
     }
 }
+
+function getStars(rating,id) {
+    var starDisplay = document.getElementById('Stars-'+id);
+    var strResultsStars="working";
+    // Round to nearest half
+    rating = Math.round(rating * 2) / 2;
+    let output = [];
+    alert(1);
+    // Append all the filled whole stars
+    for (var y = rating; y >= 1; y--)
+      output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+  
+    // If there is a half a star, append it
+    if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+  
+    // Fill the empty stars
+    for (let x = (5 - rating); x >= 1; x--)
+      output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+  
+      strResultsStars = output.join('');
+      alert(strResultsStars);
+    return output.join('');
+  
+  }
+
 //Runs the function whenever the application is started
 getRestaurants();
 init();//Initiate the Application
