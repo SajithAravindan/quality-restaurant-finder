@@ -21,15 +21,15 @@
             Finder</h1>
         <h5><i>Please enter an address to find great restaurants around you!</i></h5>
         <form id="frmUserSearch">
-            <div class="flex justify-center mt-2.5 pb-2.5">
+            <div class="flex flex-wrap justify-center mt-2.5 pb-2.5">
                 <input
-                    class="bg-gray-200 appearance-none mr-8 border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    class="bg-gray-200 appearance-none m-1 border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                     type="text" id="txtboxUserAddress" placeholder="Address">
                 <input
-                    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    class="bg-gray-200 appearance-none m-1 border-2 border-gray-200 rounded w-50 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                     type="text" id="txtboxCityName" placeholder="City,State(ex. Boston MA)">
             </div>
-            <div class="grid place-items-start md:place-items-center mt-2.5 pb-2.5">
+            <div class="flex grid place-items-center mt-2.5 pb-2.5">
                 <button id="submit"
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-3">Submit</button>
                 <div class="w-96 hidden items-center rounded-lg shadow-lg rounded-lg bg-red-500" id="divAlert">
@@ -42,11 +42,10 @@
             </div>           
         </form>
     </section>
-    <hr>
-    <!-- Favorites Section -->
+    <hr>    
     <div class="flex">
         <div id="favorites" class="w-1/5 border-r-orange-800">
-            <h2 class="text-center text-2xl font-bold">My Favorites</h2>
+            <h2 class="text-center md:text-2xl font-bold">My Favorites</h2>
         </div>
         <!-- Main area where we display the results -->
         <div class="flex justify-left mt-2.5 pb-2.5">
